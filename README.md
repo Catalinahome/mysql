@@ -21,6 +21,7 @@
 	"RequestId": "111",
 	"RequestTime": "2022-08-01 01:02:03",
 	"BatchQuery": "0",
+	"TopK":"10",
 	"PharmacyData":[
 		{"TradeName": "风寒感冒宁颗粒",
 	     "ManufacturerName": "云南白药集团股份有限公司",
@@ -44,7 +45,8 @@
 --- | --- | --- | --- | ---
 RequestId | 111 | String | 是 | 请求消息的唯一标识，由接口客户端生成，使用 UUID
 RequestTime | 2022-08-01 01:02:03 | String | 是 | 请求时间， 格式：2022-08-01 01:02:03
-BatchQuery | 0 | String | 是 | 是否批量查询，是：1；否：0
+BatchQuery | 0 | int | 是 | 是否批量查询，是：1；否：0
+TopK | 10 | int | 是 | 期望的药品匹配数量
 PharmacyData | [ 		{"TradeName": "风寒感冒宁颗粒", 	     "ManufacturerName": "云南白药集团股份有限公司", 		"CommonName": "风寒感冒宁颗粒", 		"Specification": "每袋装8g(含乳糖)", 		"DosageForm": "颗粒剂", 		"Package": "每袋装8g(含乳糖)", 		"CommodityId": "C100", 		"ApprovalNumber": "国药准字Z112233"}, 		{"TradeName": "风寒感冒宁颗粒", 		"ManufacturerName": "云南白药集团股份有限公司", 		"CommonName": "风寒感冒宁颗粒", 		"Specification": "每袋装8g(含乳糖)", 		"DosageForm": "颗粒剂", 		"Package": "每袋装8g(含乳糖)", 		"CommodityId": "C100", 		"ApprovalNumber": "国药准字Z112233"}] | Object | 是 | 药店数据
 PharmacyData.TradeName | 风寒感冒宁颗粒 | String | 是 | 商品名
 PharmacyData.ManufacturerName | 云南白药集团股份有限公司 | String | 是 | 厂商名
